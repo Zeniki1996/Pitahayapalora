@@ -1,26 +1,101 @@
 .container {
-    width: 400px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 100px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px;
+}
+img{
+  width:15%;
+}
+h1 {
+  color: #f0eaea;
+  opacity: 0;
+  font-size:80px;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+html{
+  height:100%
+}
+body{
+  background-image: url("img/fotopita.png");
+ /* Used if the image is unavailable */
+  height: 100%; /* You must set a specified height */
+ /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+p{
+  font-size:40px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+p {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  margin-top: 5%;
+}
+
+/* Responsive Styles */
+
+
+@media (max-width: 790px) {
+  .container {
+    width: 80%;
+    padding-top: 500px;
+  }
+  body{
+  height: 100%; /* You must set a specified height */
+  }
   h1 {
-    color: #333;
+    font-size: 24px;
   }
-  
   p {
-    color: #666;
-    margin-bottom: 20px;
+    font-size: 14px;
   }
-  
+
   button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
   }
-  
+}
+@media screen and (max-width: 1000px) { 
+.container {
+    padding-top: 400px;
+  }
+   body{
+  height: 100%;
+}
+  h1 {
+    font-size: 70px;
+  }
+
+  p {
+    font-size: 50px;
+  }
+
+  button {
+    font-size: 50px;
+    margin-top:20%;
+  }
+  img{
+    width:30%;
+  }
+}
